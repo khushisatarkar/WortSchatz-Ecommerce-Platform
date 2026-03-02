@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+
+    <title>WortSchatz Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <a href="index.html"><img src="img/short-logo.png" class="logo" /></a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- PRODUCT DETAILS -->
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="" width="100%" id="main-img" />
+
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img src="" width="100%" class="small-img" id="img1" />
+          </div>
+          <div class="small-img-col">
+            <img src="" width="100%" class="small-img" id="img2" />
+          </div>
+          <div class="small-img-col">
+            <img src="" width="100%" class="small-img" id="img3" />
+          </div>
+          <div class="small-img-col">
+            <img src="" width="100%" class="small-img" id="img4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-pro-details">
+        <h6 id="product-category"></h6>
+        <h4 id="product-name"></h4>
+        <h2 id="product-price"></h2>
+
+        <select>
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+          <option>X-Large</option>
+        </select>
+
+        <input type="number" value="1" min="1" />
+        <button class="normal">Add To Cart</button>
+
+        <h4>Product Details</h4>
+        <span id="product-desc"></span>
+      </div>
+    </section>
+
+    <!-- you might also like -->
+
+    <section id="product1" class="section-p1">
+      <h2>You Might Also Like</h2>
+      <p>Latest German Collection</p>
+      <div class="pro-container">
+        <div class="pro">
+          <img src="img/prod3.jpeg" alt="" />
+          <div class="des">
+            <span>WortSchatz</span>
+            <h5>Torschlusspanik Tshirt (Blue)</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹249</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/DDSFGS.jpg" alt="" />
+          <div class="des">
+            <span>WortSchatz</span>
+            <h5>DDSFGS Tshirt (Blue)</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹299</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/prod4.jpeg" alt="" />
+          <div class="des">
+            <span>WortSchatz</span>
+            <h5>Kant Tshirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹299</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+
+        <div class="pro">
+          <img src="img/prod7.jpeg" alt="" />
+          <div class="des">
+            <span>WortSchatz</span>
+            <h5>Fernweh Tshirt (Red)</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹249</h4>
+          </div>
+          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo f-logo" src="img/logo2.png" />
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 123 Fashion Street, Style City</p>
+        <p><strong>Phone:</strong> 9876543210</p>
+        <p><strong>Email:</strong> info@fashionstyle.com</p>
+      </div>
+
+      <div class="copyright">
+        <p>© 2026, WortSchatz. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- dynamic product -->
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
+
+      const products = {
+        1: {
+          category: "Home / T-Shirts",
+          name: "Wurst Tshirt (Blue)",
+          price: "₹299",
+          desc: "Wurst Tshirt is a comfortable and stylish t-shirt made from high-quality cotton. It features a classic fit and a vibrant blue color that's perfect for everyday wear.",
+          images: [
+            "img/prod5.jpeg",
+            "img/back-5.jpeg",
+            "img/man-5.jpeg",
+            "img/man-back-5.jpeg",
+          ],
+        },
+        2: {
+          category: "Home / T-Shirts",
+          name: "Kant Tshirt",
+          price: "₹349",
+          desc: "Minimalist philosophy-inspired design with premium cotton fabric.",
+          images: [
+            "img/tshirts/kant.jpeg",
+            "img/tshirts/kant-back.jpeg",
+            "img/tshirts/kant-dude.jpeg",
+            "img/tshirts/kant-dude-back.jpeg",
+          ],
+        },
+        3: {
+          category: "Home / T-Shirts",
+          name: "Fernweh Tshirt (Red)",
+          price: "₹249",
+          desc: "Soft red t-shirt inspired by the German word Fernweh.",
+          images: [
+            "img/tshirts/fernweh.jpeg",
+            "img/tshirts/fernweh-back.jpeg",
+            "img/tshirts/fernweh-dude.jpeg",
+            "img/tshirts/fernweh-dude-back.jpeg",
+          ],
+        },
+        4: {
+          category: "Home / T-Shirts",
+          name: "Torschlusspanik Tshirt (Graphite)",
+          price: "₹249",
+          desc: "Soft graphite t-shirt inspired by the German word Torschlusspanik.",
+          images: [
+            "img/tshirts/torsch.jpeg",
+            "img/tshirts/torsch-back.jpeg",
+            "img/tshirts/torsch-dude.jpeg",
+            "img/tshirts/torsch-dude-back.jpeg",
+          ],
+        },
+        5: {
+          category: "Home / T-Shirts",
+          name: "DDSFGS Tshirt (Navy)",
+          price: "₹249",
+          desc: "Soft navy t-shirt inspired by the big German word DDSFGS.",
+          images: [
+            "img/tshirts/big.jpeg",
+            "img/tshirts/big-back.jpeg",
+            "img/tshirts/big-dude.jpeg",
+            "img/tshirts/big-dude-back.jpeg",
+          ],
+        },
+        6: {
+          category: "Home / T-Shirts",
+          name: "Torschlusspanik Tshirt (Graphite)",
+          price: "₹249",
+          desc: "Soft graphite t-shirt inspired by the German word Torschlusspanik.",
+          images: [
+            "img/tshirts/torsch.jpeg",
+            "img/tshirts/torsch-back.jpeg",
+            "img/tshirts/torsch-dude.jpeg",
+            "img/tshirts/torsch-dude-back.jpeg",
+          ],
+        },
+      };
+
+      const product = products[productId];
+
+      if (product) {
+        document.getElementById("product-category").innerText =
+          product.category;
+        document.getElementById("product-name").innerText = product.name;
+        document.getElementById("product-price").innerText = product.price;
+        document.getElementById("product-desc").innerText = product.desc;
+
+        document.getElementById("main-img").src = product.images[0];
+        document.getElementById("img1").src = product.images[0];
+        document.getElementById("img2").src = product.images[1];
+        document.getElementById("img3").src = product.images[2];
+        document.getElementById("img4").src = product.images[3];
+      }
+
+      const mainImg = document.getElementById("main-img");
+      const smallImgs = document.getElementsByClassName("small-img");
+
+      for (let i = 0; i < smallImgs.length; i++) {
+        smallImgs[i].onclick = function () {
+          mainImg.src = smallImgs[i].src;
+        };
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

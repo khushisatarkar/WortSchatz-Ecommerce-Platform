@@ -330,6 +330,7 @@ button.white {
   background-position: center;
   padding: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #banner3 h2 {
@@ -572,6 +573,33 @@ footer .copyright {
 
 #prodetails .single-pro-details span {
   line-height: 25px;
+}
+
+/* contct.html */
+
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-details form span {
+  font-size: 12px;
+}
+
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  border: 1px solid #e1e1e1;
 }
 
 /* media query */

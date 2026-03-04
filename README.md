@@ -38,22 +38,25 @@ CSS3 – Styling and responsive design
 JavaScript – Dynamic functionality and interactions
 
 ## 📂 Project Structure
-- WortSchatz/
-│
+WortSchatz/
+
 ├── index.html
+
 ├── shop.html
+
 ├── about.html
+
 ├── contact.html
+
 ├── sproduct.html
+
 ├── cart.html
-│
+
 ├── style.css
-│
+
 ├── script.js
-│
-└── img/
-    └── tshirts/
-    └── badges/
+
+└── img/   (product images folder)
 
 ## 📸 Screenshots
 

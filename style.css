@@ -334,7 +334,7 @@ button.white {
 }
 
 #banner3 h2 {
-  color: #fff;
+  color: #1a1a1a;
   font-size: 22px;
   font-weight: 900;
 }
@@ -346,11 +346,15 @@ button.white {
 }
 
 #banner3 .banner-box2 {
-  background-image: url("img/badge.jpeg");
+  background-image: url("img/badge-banner.jpg");
 }
 
 #banner3 .banner-box3 {
   background-image: url("img/bookmark.jpg");
+}
+
+#banner3 .banner-box4 {
+  background-image: url("img/tshirt-banner.jpg");
 }
 
 #newsletter {
@@ -740,6 +744,49 @@ footer .copyright {
     width: 100%;
   }
 
+  /* shop */
+
+  .section-p1 {
+    padding: 40px 20px;
+  }
+
+  .section-m1 {
+    margin: 10px 0;
+  }
+
+  #product1 .pro-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #product1 .pro {
+    width: 10%;
+    min-width: 150px;
+  }
+
+  #product1 .pro a {
+    width: 30px;
+    height: 30px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  #product1 .pro a i {
+    font-size: 14px;
+  }
+
+  #product1 .pro .des span {
+    font-size: 9px;
+  }
+
+  #product1 .pro .des h5 {
+    font-size: 12px;
+  }
+
+  #product1 .pro .des h4 {
+    font-size: 12px;
+  }
+
   /* single product view */
 
   #prodetails {
@@ -754,5 +801,9 @@ footer .copyright {
 
   #prodetails .single-pro-details {
     width: 100%;
+  }
+
+  #prodetails .single-pro-details h2 {
+    font-size: 22px;
   }
 }

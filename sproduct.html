@@ -21,10 +21,10 @@
 
       <div>
         <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Startseite</a></li>
           <li><a class="active" href="shop.html">Shop</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
           <li id="lg-bag">
             <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
           </li>
@@ -59,17 +59,21 @@
         <h2 id="product-price"></h2>
 
         <select>
-          <option>Select Size</option>
-          <option>Small</option>
+          <option>Wählen Sie Größe</option>
+          <option>Klein</option>
           <option>Medium</option>
-          <option>Large</option>
-          <option>X-Large</option>
+          <option>Groß</option>
+          <option>XL</option>
         </select>
 
         <input type="number" value="1" min="1" />
-        <button class="normal">Add To Cart</button>
+        <button class="normal">In den Warenkorb legen</button>
 
-        <h4>Product Details</h4>
+        <div class="colour-container">
+          <h3 id="product-colour">Farbe</h3>
+        </div>
+
+        <h4>Produktdetails</h4>
         <span id="product-desc"></span>
       </div>
     </section>
@@ -77,8 +81,8 @@
     <!-- you might also like -->
 
     <section id="product1" class="section-p1">
-      <h2>You Might Also Like</h2>
-      <p>Latest German Collection</p>
+      <h2>Sie könnten auch mögen</h2>
+      <p>Neueste deutsche Kollektion</p>
       <div class="pro-container">
         <div class="pro" onclick="window.location.href = 'sproduct.html?id=5'">
           <img src="img/tshirts/big.jpeg" alt="" />
@@ -153,12 +157,12 @@
     <footer class="section-p1">
       <div class="col">
         <img class="logo f-logo" src="img/logo2.png" alt="" />
-        <h4>Contact</h4>
-        <p><strong>Address:</strong> 123 Fashion Street, Style City</p>
-        <p><strong>Phone:</strong> 9876543210</p>
+        <h4>Kontakt</h4>
+        <p><strong>Adresse:</strong> 123 Fashion Street, Style City</p>
+        <p><strong>Telefon:</strong> 9876543210</p>
         <p><strong>Email:</strong> info@fashionstyle.com</p>
         <div class="follow">
-          <h4>Follow Us</h4>
+          <h4>Folge uns</h4>
           <div class="icon">
             <i class="fab fa-instagram"></i>
             <i class="fab fa-linkedin"></i>
@@ -170,26 +174,26 @@
       </div>
 
       <div class="col">
-        <h4>About</h4>
-        <a href="about.html">About Us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <h4>Über uns</h4>
+        <a href="about.html">Über uns</a>
+        <a href="#">Lieferinformationen</a>
+        <a href="#">Datenschutzerklärung</a>
+        <a href="#">Allgemeine Geschäftsbedingungen</a>
       </div>
 
       <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="cart.html">View Cart</a>
-        <a href="#">Track Order</a>
-        <a href="#">Help</a>
+        <h4>Mein Konto</h4>
+        <a href="#">Anmelden</a>
+        <a href="cart.html">Warenkorb ansehen</a>
+        <a href="#">Bestellung verfolgen</a>
+        <a href="#">Hilfe</a>
       </div>
 
       <div class="col">
-        <h4>Our Team</h4>
+        <h4>Unser Team</h4>
         <a href="contact.html">Krupa Dhamdhere</a>
         <a href="contact.html">Sharvani Chiplunkar</a>
-        <a href="contact.html">Sujal Thombre</a>
+        <a href="contact.html">Sujal Thombare</a>
       </div>
 
       <div class="copyright">
@@ -204,10 +208,11 @@
 
       const products = {
         1: {
-          category: "Home / T-Shirts",
-          name: "Wurst Tshirt (Butter)",
+          category: "Startseite / T-Shirts",
+          name: "Wurst - Deutsches Wort T-Shirt",
           price: "₹299",
-          desc: "Wurst Tshirt is a comfortable and stylish t-shirt made from high-quality cotton. It features a classic fit and a vibrant butter color that's perfect for everyday wear.",
+          colour: "Farbe: Sanfte Senf",
+          desc: "Dieses kreative Baumwoll-T-Shirt bringt ein ikonisches deutsches Wort auf stilvolle Weise zur Geltung. „Wurst“ steht nicht nur für eine bekannte Spezialität, sondern auch für ein humorvolles Sprachstatement. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
             "img/tshirts/wurst.jpeg",
             "img/tshirts/wurst-back.jpeg",
@@ -216,10 +221,11 @@
           ],
         },
         2: {
-          category: "Home / T-Shirts",
-          name: "Kant Tshirt",
-          price: "₹349",
-          desc: "Minimalist philosophy-inspired design with premium cotton fabric.",
+          category: "Startseite / T-Shirts",
+          name: "Final Kant down - Kant Wortspiel T-Shirt",
+          price: "₹299",
+          colour: "Farbe: Weiß",
+          desc: "Dieses T-Shirt verbindet Philosophie mit Humor. Das Design spielt mit dem Lied „The Final Countdown“ und macht daraus das Wortspiel „Final Kantdown“ , eine Anspielung auf den Philosophen Immanuel Kant. Ein kreatives Shirt für alle, die Sprache, Philosophie und cleveren Humor mögen. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
             "img/tshirts/kant.jpeg",
             "img/tshirts/kant-back.jpeg",
@@ -228,10 +234,11 @@
           ],
         },
         3: {
-          category: "Home / T-Shirts",
-          name: "Fernweh Tshirt (White)",
+          category: "Startseite / T-Shirts",
+          name: "Fernweh – Illustration T-Shirt",
           price: "₹249",
-          desc: "Soft white t-shirt inspired by the German word Fernweh.",
+          colour: "Farbe: Weiß",
+          desc: "Dieses kreative T-Shirt interpretiert das deutsche Wort „Fernweh“ mit einer Illustration, die die Sehnsucht nach der Ferne visuell darstellt. Das hochwertige Baumwollmaterial sorgt für Komfort und macht das Shirt zu einem stilvollen Begleiter für jeden Tag.",
           images: [
             "img/tshirts/fernweh.jpeg",
             "img/tshirts/fernweh-back.jpeg",
@@ -240,10 +247,14 @@
           ],
         },
         4: {
-          category: "Home / T-Shirts",
-          name: "Torschlusspanik Tshirt (Graphite)",
+          category: "Startseite / T-Shirts",
+          name: "Torschlusspanik – Deutsches Wort T-Shirt",
           price: "₹249",
-          desc: "Soft graphite t-shirt inspired by the German word Torschlusspanik.",
+          colour: "Farbe: Graphit",
+          desc:
+            "Bedeutung: " +
+            "Die Angst, eine wichtige Gelegenheit im Leben zu verpassen, weil die Zeit knapp wird." +
+            " Dieses Baumwoll-T-Shirt verbindet Komfort mit kreativem Sprachdesign. Das deutsche Wort „Torschlusspanik“ wird zum stilvollen Statement und bringt gleichzeitig ein Stück deutscher Kultur in deinen Alltag. Das weiche, atmungsaktive Material sorgt für ein angenehmes Tragegefühl und macht das Shirt zum perfekten Begleiter für jeden Tag.",
           images: [
             "img/tshirts/torsch.jpeg",
             "img/tshirts/torsch-back.jpeg",
@@ -252,10 +263,11 @@
           ],
         },
         5: {
-          category: "Home / T-Shirts",
-          name: "DDSFGS Tshirt (Navy)",
+          category: "Startseite / T-Shirts",
+          name: "DonaudampfschifffahrtsgesellschaftDeutsches Kulturwort Tshirt",
           price: "₹249",
-          desc: "Soft navy t-shirt inspired by the big German word DDSFGS.",
+          colour: "Farbe: Marineblau",
+          desc: "Dieses T-Shirt zeigt eines der berühmtesten langen deutschen Wörter: „Donaudampfschifffahrtsgesellschaft“. Das Design verbindet Humor, Sprache und Kultur in einem einzigartigen Statement. Das weiche Baumwollmaterial sorgt für hohen Tragekomfort und macht das Shirt perfekt für Sprachliebhaber.",
           images: [
             "img/tshirts/big.jpeg",
             "img/tshirts/big-back.jpeg",
@@ -264,10 +276,11 @@
           ],
         },
         6: {
-          category: "Home / T-Shirts",
-          name: "Wurst Tshirt (White)",
+          category: "Startseite / T-Shirts",
+          name: "Wurst - Deutsches Wort T-Shirt",
           price: "₹249",
-          desc: "Soft white t-shirt inspired by the German word Wurst.",
+          colour: "Farbe: Weiß",
+          desc: "Dieses kreative Baumwoll-T-Shirt bringt ein ikonisches deutsches Wort auf stilvolle Weise zur Geltung. „Wurst“ steht nicht nur für eine bekannte Spezialität, sondern auch für ein humorvolles Sprachstatement. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
             "img/tshirts/wurst2.jpeg",
             "img/tshirts/wurst2-back.jpeg",
@@ -276,10 +289,11 @@
           ],
         },
         7: {
-          category: "Home / Tote Bags",
-          name: "Verwandlung Tote Bag ",
+          category: "Startseite / Stofftasche",
+          name: "Kafka- Verwandlung Stofftasche",
           price: "₹199",
-          desc: "Pure cotton tote bag inspired by the German word Verwandlung.",
+          colour: " ",
+          desc: "Diese Stofftasche ist inspiriert von der berühmten Erzählung Die Verwandlung von Franz Kafka. Das Design zeigt eine künstlerische Illustration, die Motive der Geschichte aufgreift und Literatur mit modernem Stil verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
           images: [
             "img/tote1.jpeg",
             "img/tote1-front.jpeg",
@@ -288,10 +302,11 @@
           ],
         },
         8: {
-          category: "Home / Badges",
-          name: "Jein Badge",
+          category: "Startseite / Badges",
+          name: "Jein – Deutsches Wort Badge",
           price: "₹69",
-          desc: "A badge that represents the German word 'Jein', meaning 'Yes' and 'No'.",
+          colour: "Größe: 1.25'' und 2.25'' ",
+          desc: "Der Badge zeigt das typisch deutsche Wort „Jein“– eine Mischung aus „Ja“ und „Nein“ , wenn man sich nicht eindeutig entscheiden kann. Ein humorvolles Sprach-Statement für Deutschlernende und Sprachliebhaber. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements",
           images: [
             "img/badges/jein.jpeg",
             "img/badges/jein.jpeg",
@@ -300,10 +315,11 @@
           ],
         },
         9: {
-          category: "Home / Badges",
-          name: "Moin Badge",
+          category: "Startseite / Badges",
+          name: "Moin – Deutscher Gruß Badge",
           price: "₹69",
-          desc: "A badge that represents the German word 'Moin', meaning 'Hello'.",
+          colour: "Größe: 1.25''",
+          desc: "Der Badge zeigt den beliebten norddeutschen Gruß „Moin“. Ein minimalistisches Design für alle, die deutsche Sprache und Kultur mögen. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements",
           images: [
             "img/badges/moin.jpeg",
             "img/badges/moin.jpeg",
@@ -312,10 +328,11 @@
           ],
         },
         10: {
-          category: "Home / Badges",
-          name: "Halt Die Klappe Badge",
+          category: "Startseite / Badges",
+          name: "Halt die Klappe – Frecher Spruch Badge",
           price: "₹69",
-          desc: "A badge that represents the German word 'Halt Die Klappe', meaning 'Shut Up'.",
+          colour: "Größe: 1.25''",
+          desc: "Dieser Badge bringt einen frechen deutschen Ausdruck auf humorvolle Weise zum Ausdruck. Perfekt für alle, die Spaß an Sprache und Ironie haben. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
             "img/badges/halt.jpeg",
             "img/badges/halt.jpeg",
@@ -324,10 +341,11 @@
           ],
         },
         11: {
-          category: "Home / Badges",
-          name: "Friedrich Badge",
+          category: "Startseite / Badges",
+          name: "Nietzsche – Illustration Badge",
           price: "₹69",
-          desc: "A badge that represents the German word 'Friedrich'.",
+          colour: "Größe: 2.25''",
+          desc: "Dieser Badge zeigt eine Illustration des Philosophen Friedrich Nietzsche und verbindet Philosophie mit modernem Design. erfekt für Bücherliebhaber, Studierende und Kulturinteressierte. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
             "img/badges/friedrich.jpeg",
             "img/badges/friedrich.jpeg",
@@ -336,10 +354,219 @@
           ],
         },
         12: {
-          category: "Home / Badges",
-          name: "Franz Kafka Badge",
+          category: "Startseite / Badges",
+          name: "Franz Kafka BadgeKafka – Illustration Badge",
           price: "₹69",
-          desc: "A badge that represents the German author Franz Kafka.",
+          colour: "Größe: 2.25''",
+          desc: "Ein stilvoller Badge mit einer Illustration des berühmten Schriftstellers Franz Kafka. Ideal für Literaturfans und Deutschlernende.Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        13: {
+          category: "Startseite / Lesezeichen",
+          name: "Brief an den Vater – Kafka Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen greift Motive aus dem berühmten Werk Brief an den Vater von Franz Kafka auf. Das Design verbindet Literaturgeschichte mit einem modernen, minimalistischen Stil. Perfekt für Literaturfans und Studierende der Germanistik",
+          images: [
+            "img/bookmarks/kafka.jpg",
+            "img/bookmarks/kafka.jpg",
+            "img/bookmarks/kafka.jpg",
+            "img/bookmarks/kafka.jpg",
+          ],
+        },
+        14: {
+          category: "Startseite / Lesezeichen",
+          name: "Brief an den Vater – Kafka Literatur Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen ist inspiriert von Brief an den Vater, einem persönlichen und bedeutenden Text von Franz Kafka. Ein besonderes Accessoire für Leserinnen und Leser, die sich für klassische Literatur und literarische Geschichte interessieren.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        15: {
+          category: "Startseite / Lesezeichen",
+          name: "Kafkas Zeichnungen – Literatur Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen zeigt die bekannten Zeichnungen des Schriftstellers Franz Kafka. Neben seinen literarischen Werken hinterließ Kafka auch zahlreiche Skizzen und Illustrationen, die heute als Teil seines künstlerischen Schaffens gelten. Ein besonderes Lesezeichen für Literaturinteressierte, Kunstliebhaber und Leserinnen und Leser, die sich für das Werk von Kafka interessieren.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        16: {
+          category: "Startseite / Lesezeichen",
+          name: "Franz Kafka – Literatur Portrait Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen ist eine Illustration von den bedeutenden Schriftsteller Franz Kafka, dessen Werke zu den wichtigsten der modernen Literatur gehören. Ein stilvolles Lesezeichen für Leserinnen und Leser, die sich für deutsche und europäische Literatur interessieren.",
+          images: [
+            "img/bookmarks/kafka4.jpg",
+            "img/bookmarks/kafka4.jpg",
+            "img/bookmarks/kafka4.jpg",
+            "img/bookmarks/kafka4.jpg",
+          ],
+        },
+        17: {
+          category: "Startseite / Lesezeichen",
+          name: "Oktoberfest – Kultur Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen ist inspiriert vom berühmten bayerischen Volksfest Oktoberfest. Das Design greift typische Elemente der deutschen Festkultur auf und bringt ein Stück Bayern in dein Buch. Perfekt für Kulturfans, Reisende und alle, die deutsche Traditionen mögen.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        18: {
+          category: "Startseite / Lesezeichen",
+          name: "Deutschlandpfanne Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen zeigt den berühmten Kölner Dom, eines der bekanntesten Wahrzeichen Deutschlands. Neben dem Foto enthält das Design auch kurze Informationen über die Kathedrale und verbindet so Lesen mit kulturellem Wissen. Ein perfektes Lesezeichen für Bücherliebhaber, Reisefans und alle, die sich für deutsche Architektur interessieren.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        19: {
+          category: "Startseite / Lesezeichen",
+          name: "Kölner Dom – Architektur Lesezeichen",
+          price: "₹69",
+          colour: " ",
+          desc: "Dieses Lesezeichen zeigt den berühmten Kölner Dom, eines der bekanntesten Wahrzeichen Deutschlands. Neben dem Foto enthält das Design auch kurze Informationen über die Kathedrale und verbindet so Lesen mit kulturellem Wissen. Ein perfektes Lesezeichen für Bücherliebhaber, Reisefans und alle, die sich für deutsche Architektur interessieren.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        20: {
+          category: "Startseite / Stofftasche",
+          name: "Wurst – Deutsches Wort Stofftasche",
+          price: "₹199",
+          colour: " ",
+          desc: "Diese Stofftasche bringt ein klassisches deutsches Wort auf humorvolle Weise in den Alltag. „Wurst“ wird hier zum kreativen Design, das Sprache und Kultur spielerisch verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        21: {
+          category: "Startseite / Stofftasche",
+          name: "Nietzsche- Nihilimsus meme Stofftasche",
+          price: "₹199",
+          colour: " ",
+          desc: "Diese Stofftasche bringt ein klassisches deutsches Wort auf humorvolle Weise in den Alltag. „Wurst“ wird hier zum kreativen Design, das Sprache und Kultur spielerisch verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        22: {
+          category: "Startseite / Stofftasche",
+          name: "Final Kant down – Kant Wortspiel Stofftasche",
+          price: "₹199",
+          colour: " ",
+          desc: "Diese Stofftasche spielt humorvoll mit dem bekannten Song „The Final Countdown“ und verwandelt ihn in das Wortspiel „Final Kantdown“, eine Anspielung auf den Philosophen Immanuel Kant. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        23: {
+          category: "Startseite / Badges",
+          name: "Tja – Deutsches Wort Badge",
+          price: "₹69",
+          colour: "Größe: 1.25''",
+          desc: "Der Badge zeigt das typisch deutsche Wort „Tja“ , das oft verwendet wird, wenn man keine bessere Antwort hat. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        24: {
+          category: "Startseite / Badges",
+          name: "Muskatnuss – Deutsches Wort Badge",
+          price: "₹69",
+          colour: "Größe: 1.25''",
+          desc: "Der Badge zeigt das typisch deutsche Wort „Tja“ , das oft verwendet wird, wenn man keine bessere Antwort hat. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        25: {
+          category: "Startseite / Badges",
+          name: "Doppelgänger x TVD – Serienreferenz Badge",
+          price: "₹69",
+          colour: "Größe: 2.25''",
+          desc: "Dieser Badge kombiniert das deutsche Wort „Doppelgänger“ mit einer Popkultur-Referenz zur Serie The Vampire Diaries. Ein kreatives Accessoire für Serienfans und Deutschlernende. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        26: {
+          category: "Startseite / Badges",
+          name: "Kafka x KFC – Lustiger Literatur Badge",
+          price: "₹69",
+          colour: "Größe: 2.25''",
+          desc: "Dieser kreative Badge verbindet Literatur mit Humor. Das Design spielt auf den berühmten Schriftsteller Kafka an und kombiniert ihn mit einer popkulturellen Referenz. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        27: {
+          category: "Startseite / Tshirts",
+          name: "Fernweh – Wörterbuch Edition T-Shirt",
+          price: "₹299",
+          colour: "Farbe: Marineblau",
+          desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
+          images: [
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+            "img/badges/idk.jpeg",
+          ],
+        },
+        28: {
+          category: "Startseite / Tshirts",
+          name: "Fernweh – Wörterbuch Edition T-Shirt",
+          price: "₹299",
+          colour: "Farbe: Kreuzkümmel",
+          desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
           images: [
             "img/badges/idk.jpeg",
             "img/badges/idk.jpeg",
@@ -357,6 +584,8 @@
         document.getElementById("product-name").innerText = product.name;
         document.getElementById("product-price").innerText = product.price;
         document.getElementById("product-desc").innerText = product.desc;
+        // document.getElementById("product-meaning").innerText = product.meaning;
+        document.getElementById("product-colour").innerText = product.colour;
 
         document.getElementById("main-img").src = product.images[0];
         document.getElementById("img1").src = product.images[0];

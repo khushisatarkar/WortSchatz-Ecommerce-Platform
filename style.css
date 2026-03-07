@@ -134,7 +134,7 @@ body {
 
 /* homepage */
 #hero {
-  background-image: url("img/hero1.jpeg");
+  background-image: url("img/clear-hero.jpg");
   margin-top: 90px;
   height: 90vh;
   width: 100%;
@@ -237,6 +237,7 @@ body {
   padding-top: 7px;
   color: #1a1a1a;
   font-size: 14px;
+  line-height: 20px;
 }
 
 #product1 .pro .des i {
@@ -578,6 +579,10 @@ footer .copyright {
 
 #prodetails .single-pro-details span {
   line-height: 25px;
+}
+
+#product-colour {
+  padding-top: 30px;
 }
 
 /* contact.html */

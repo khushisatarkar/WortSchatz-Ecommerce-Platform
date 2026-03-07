@@ -162,11 +162,7 @@ body {
   background-color: transparent;
   border: 0;
   padding: 20px 0;
-  /* padding: 10px 20px;
-  border: 2px solid #900801;
-  border-radius: 16px; */
   cursor: pointer;
-  /* cursor: pointer; */
 }
 
 #hero button:hover {
@@ -764,25 +760,53 @@ footer .copyright {
 
 @media (max-width: 477px) {
   #header {
-    padding: 10px 30px;
+    padding: 10px 10px;
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 30px;
+    line-height: 50px;
   }
 
   h2 {
     font-size: 32px;
+    line-height: 40px;
+  }
+
+  #hero h4 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  #hero h1 {
+    font-size: 14px;
+  }
+
+  #hero p {
+    padding-top: 0;
+    line-height: 30px;
+    font-size: 14px;
   }
 
   #hero {
-    padding: 0 20px;
+    background-image: url("img/hero2.jpg");
+    padding: 60px 30px;
     background-position: 60%;
     margin-top: 74px;
+    height: 95vh;
+    justify-content: start;
+  }
+
+  #hero button {
+    font-size: 16px;
   }
 
   #product1 .pro {
     width: 100%;
+  }
+
+  #product1 .pro h5 {
+    line-height: 20px;
   }
 
   #sm-banner {
@@ -799,6 +823,10 @@ footer .copyright {
 
   #banner3 {
     padding: 0 20px;
+  }
+
+  #banner3 h5 {
+    font-size: 26px;
   }
 
   #banner3 .banner-box {

@@ -650,6 +650,17 @@ footer .copyright {
   color: #1a1a1a;
 }
 
+/* cart.html */
+
+#cart-items {
+  font-size: 26px;
+  padding: 160px 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* color: #d5241b; */
+}
+
 /* media query */
 
 @media (max-width: 799px) {

@@ -69,9 +69,7 @@
         <input type="number" value="1" min="1" />
         <button class="normal">In den Warenkorb legen</button>
 
-        <div class="colour-container">
-          <h3 id="product-colour">Farbe</h3>
-        </div>
+        <h3 id="product-colour"></h3>
 
         <h4>Produktdetails</h4>
         <span id="product-desc"></span>
@@ -584,7 +582,6 @@
         document.getElementById("product-name").innerText = product.name;
         document.getElementById("product-price").innerText = product.price;
         document.getElementById("product-desc").innerText = product.desc;
-        // document.getElementById("product-meaning").innerText = product.meaning;
         document.getElementById("product-colour").innerText = product.colour;
 
         document.getElementById("main-img").src = product.images[0];

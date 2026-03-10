@@ -491,6 +491,51 @@ footer .copyright {
   align-items: flex-start;
 }
 
+#about-head {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-images {
+  display: flex;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.about-images img:hover {
+  transform: translateY(-5px);
+}
+
+.about-text h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  max-width: 600px;
+  line-height: 1.7;
+  color: #555;
+  font-size: 16px;
+}
+
+.about-images img:nth-child(2) {
+  margin-top: 30px;
+}
+
+.about-images img:nth-child(3) {
+  margin-top: 60px;
+}
+
 /* shop.html */
 
 #page-header {

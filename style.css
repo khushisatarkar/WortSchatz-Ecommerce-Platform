@@ -527,14 +527,6 @@ footer .copyright {
   color: #555;
   font-size: 16px;
 }
-/* 
-.about-images img:nth-child(2) {
-  margin-top: 30px;
-}
-
-.about-images img:nth-child(3) {
-  margin-top: 60px;
-} */
 
 /* shop.html */
 
@@ -959,6 +951,40 @@ footer .copyright {
     font-size: 22px;
   }
 
+  /* about */
+
+  #about-head {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-images {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .about-images img {
+    width: 30%;
+    height: 10%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
   /* contact */
 
   #form-details {
@@ -970,5 +996,22 @@ footer .copyright {
   #form-details form {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  /* cart */
+
+  #cart-items {
+    font-size: 18px;
+    padding: 100px 60px;
+  }
+
+  #newsletter input {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #newsletter button {
+    width: 150px;
+    padding-left: 7px;
   }
 }

@@ -15,7 +15,6 @@
   </head>
 
   <body>
-    <!-- HEADER -->
     <header id="header">
       <a href="index.html"><img src="img/short-logo.png" class="logo" /></a>
 
@@ -32,7 +31,6 @@
       </div>
     </header>
 
-    <!-- PRODUCT DETAILS -->
     <section id="prodetails" class="section-p1">
       <div class="single-pro-image">
         <img src="" width="100%" id="main-img" />
@@ -58,13 +56,7 @@
         <h4 id="product-name"></h4>
         <h2 id="product-price"></h2>
 
-        <select>
-          <option>Wählen Sie Größe</option>
-          <option>Klein</option>
-          <option>Medium</option>
-          <option>Groß</option>
-          <option>XL</option>
-        </select>
+        <div id="size-container"></div>
 
         <input type="number" value="1" min="1" />
         <button class="normal">In den Warenkorb legen</button>
@@ -76,127 +68,6 @@
       </div>
     </section>
 
-    <!-- you might also like -->
-
-    <section id="product1" class="section-p1">
-      <h2>Sie könnten auch mögen</h2>
-      <p>Neueste deutsche Kollektion</p>
-      <div class="pro-container">
-        <div class="pro" onclick="window.location.href = 'sproduct.html?id=13'">
-          <img src="img/bookmarks/kafka.jpg" alt="" />
-          <div class="des">
-            <span>WortSchatz</span>
-            <h5>Brief an den Vater – Kafka Lesezeichen</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>₹69</h4>
-          </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-        </div>
-        <div class="pro" onclick="window.location.href = 'sproduct.html?id=1'">
-          <img src="img/tshirts/wurst.jpeg" alt="" />
-          <div class="des">
-            <span>WortSchatz</span>
-            <h5>Wurst Tshirt (Butter)</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>₹299</h4>
-          </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-        </div>
-        <div class="pro" onclick="window.location.href = 'sproduct.html?id=10'">
-          <img src="img/badges/halt.jpeg" alt="" />
-          <div class="des">
-            <span>WortSchatz</span>
-            <h5>Halt die Klappe – Frecher Spruch Badge</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>₹69</h4>
-          </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-        </div>
-        <div class="pro" onclick="window.location.href = 'sproduct.html?id=2'">
-          <img src="img/tshirts/kant.jpeg" alt="" />
-          <div class="des">
-            <span>WortSchatz</span>
-            <h5>Kant Tshirt</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>₹299</h4>
-          </div>
-          <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="section-p1">
-      <div class="col">
-        <img class="logo f-logo" src="img/logo2.png" alt="" />
-        <h4>Kontakt</h4>
-        <p><strong>Adresse:</strong> 123 Fashion Street, Style City</p>
-        <p><strong>Telefon:</strong> 9876543210</p>
-        <p><strong>Email:</strong> info@fashionstyle.com</p>
-        <div class="follow">
-          <h4>Folge uns</h4>
-          <div class="icon">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-pinterest"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <h4>Über uns</h4>
-        <a href="about.html">Über uns</a>
-        <a href="#">Lieferinformationen</a>
-        <a href="#">Datenschutzerklärung</a>
-        <a href="#">Allgemeine Geschäftsbedingungen</a>
-      </div>
-
-      <div class="col">
-        <h4>Mein Konto</h4>
-        <a href="#">Anmelden</a>
-        <a href="cart.html">Warenkorb ansehen</a>
-        <a href="#">Bestellung verfolgen</a>
-        <a href="#">Hilfe</a>
-      </div>
-
-      <div class="col">
-        <h4>Unser Team</h4>
-        <a href="contact.html">Krupa Dhamdhere</a>
-        <a href="contact.html">Sharvani Chiplunkar</a>
-        <a href="contact.html">Sujal Thombare</a>
-      </div>
-
-      <div class="copyright">
-        <p>© 2026, WortSchatz. Alle Rechte vorbehalten.</p>
-      </div>
-    </footer>
-
-    <!-- dynamic product -->
     <script>
       const params = new URLSearchParams(window.location.search);
       const productId = params.get("id");
@@ -205,7 +76,7 @@
         1: {
           category: "Startseite / T-Shirts",
           name: "Wurst - Deutsches Wort T-Shirt",
-          price: "₹299",
+          price: "₹350",
           colour: "Farbe: Sanfte Senf",
           desc: "Dieses kreative Baumwoll-T-Shirt bringt ein ikonisches deutsches Wort auf stilvolle Weise zur Geltung. „Wurst“ steht nicht nur für eine bekannte Spezialität, sondern auch für ein humorvolles Sprachstatement. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
@@ -218,7 +89,7 @@
         2: {
           category: "Startseite / T-Shirts",
           name: "Final Kant down - Kant Wortspiel T-Shirt",
-          price: "₹299",
+          price: "₹350",
           colour: "Farbe: Weiß",
           desc: "Dieses T-Shirt verbindet Philosophie mit Humor. Das Design spielt mit dem Lied „The Final Countdown“ und macht daraus das Wortspiel „Final Kantdown“ , eine Anspielung auf den Philosophen Immanuel Kant. Ein kreatives Shirt für alle, die Sprache, Philosophie und cleveren Humor mögen. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
@@ -231,7 +102,7 @@
         3: {
           category: "Startseite / T-Shirts",
           name: "Fernweh – Illustration T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Weiß",
           desc: "Dieses kreative T-Shirt interpretiert das deutsche Wort „Fernweh“ mit einer Illustration, die die Sehnsucht nach der Ferne visuell darstellt. Das hochwertige Baumwollmaterial sorgt für Komfort und macht das Shirt zu einem stilvollen Begleiter für jeden Tag.",
           images: [
@@ -244,7 +115,7 @@
         4: {
           category: "Startseite / T-Shirts",
           name: "Torschlusspanik – Deutsches Wort T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Graphit",
           desc:
             "Bedeutung: " +
@@ -260,7 +131,7 @@
         5: {
           category: "Startseite / T-Shirts",
           name: "DonaudampfschifffahrtsgesellschaftDeutsches Kulturwort Tshirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Marineblau",
           desc: "Dieses T-Shirt zeigt eines der berühmtesten langen deutschen Wörter: „Donaudampfschifffahrtsgesellschaft“. Das Design verbindet Humor, Sprache und Kultur in einem einzigartigen Statement. Das weiche Baumwollmaterial sorgt für hohen Tragekomfort und macht das Shirt perfekt für Sprachliebhaber.",
           images: [
@@ -273,7 +144,7 @@
         6: {
           category: "Startseite / T-Shirts",
           name: "Wurst - Deutsches Wort T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Weiß",
           desc: "Dieses kreative Baumwoll-T-Shirt bringt ein ikonisches deutsches Wort auf stilvolle Weise zur Geltung. „Wurst“ steht nicht nur für eine bekannte Spezialität, sondern auch für ein humorvolles Sprachstatement. Dieses hochwertige Baumwoll-T-Shirt verbindet Komfort mit Kreativität. Hergestellt aus weicher, atmungsaktiver Baumwolle bietet es ein angenehmes Tragegefühl und eignet sich perfekt für den Alltag.",
           images: [
@@ -286,7 +157,7 @@
         7: {
           category: "Startseite / Stofftasche",
           name: "Kafka- Verwandlung Stofftasche",
-          price: "₹199",
+          price: "₹250",
           colour: " ",
           desc: "Diese Stofftasche ist inspiriert von der berühmten Erzählung Die Verwandlung von Franz Kafka. Das Design zeigt eine künstlerische Illustration, die Motive der Geschichte aufgreift und Literatur mit modernem Stil verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
           images: [
@@ -299,7 +170,7 @@
         8: {
           category: "Startseite / Badges",
           name: "Jein – Deutsches Wort Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 1.25'' und 2.25'' ",
           desc: "Der Badge zeigt das typisch deutsche Wort „Jein“– eine Mischung aus „Ja“ und „Nein“ , wenn man sich nicht eindeutig entscheiden kann. Ein humorvolles Sprach-Statement für Deutschlernende und Sprachliebhaber. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements",
           images: [
@@ -312,7 +183,7 @@
         9: {
           category: "Startseite / Badges",
           name: "Moin – Deutscher Gruß Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 1.25''",
           desc: "Der Badge zeigt den beliebten norddeutschen Gruß „Moin“. Ein minimalistisches Design für alle, die deutsche Sprache und Kultur mögen. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements",
           images: [
@@ -325,7 +196,7 @@
         10: {
           category: "Startseite / Badges",
           name: "Halt die Klappe – Frecher Spruch Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 1.25''",
           desc: "Dieser Badge bringt einen frechen deutschen Ausdruck auf humorvolle Weise zum Ausdruck. Perfekt für alle, die Spaß an Sprache und Ironie haben. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -338,7 +209,7 @@
         11: {
           category: "Startseite / Badges",
           name: "Nietzsche – Illustration Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2.25''",
           desc: "Dieser Badge zeigt eine Illustration des Philosophen Friedrich Nietzsche und verbindet Philosophie mit modernem Design. erfekt für Bücherliebhaber, Studierende und Kulturinteressierte. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -351,7 +222,7 @@
         12: {
           category: "Startseite / Badges",
           name: "Franz Kafka BadgeKafka – Illustration Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2.25''",
           desc: "Ein stilvoller Badge mit einer Illustration des berühmten Schriftstellers Franz Kafka. Ideal für Literaturfans und Deutschlernende.Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -364,7 +235,7 @@
         13: {
           category: "Startseite / Lesezeichen",
           name: "Brief an den Vater – Kafka Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen greift Motive aus dem berühmten Werk Brief an den Vater von Franz Kafka auf. Das Design verbindet Literaturgeschichte mit einem modernen, minimalistischen Stil. Perfekt für Literaturfans und Studierende der Germanistik",
           images: [
@@ -377,7 +248,7 @@
         14: {
           category: "Startseite / Lesezeichen",
           name: "Brief an den Vater – Kafka Literatur Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen ist inspiriert von Brief an den Vater, einem persönlichen und bedeutenden Text von Franz Kafka. Ein besonderes Accessoire für Leserinnen und Leser, die sich für klassische Literatur und literarische Geschichte interessieren.",
           images: [
@@ -390,7 +261,7 @@
         15: {
           category: "Startseite / Lesezeichen",
           name: "Kafkas Zeichnungen – Literatur Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen zeigt die bekannten Zeichnungen des Schriftstellers Franz Kafka. Neben seinen literarischen Werken hinterließ Kafka auch zahlreiche Skizzen und Illustrationen, die heute als Teil seines künstlerischen Schaffens gelten. Ein besonderes Lesezeichen für Literaturinteressierte, Kunstliebhaber und Leserinnen und Leser, die sich für das Werk von Kafka interessieren.",
           images: [
@@ -403,7 +274,7 @@
         16: {
           category: "Startseite / Lesezeichen",
           name: "Franz Kafka – Literatur Portrait Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen ist eine Illustration von den bedeutenden Schriftsteller Franz Kafka, dessen Werke zu den wichtigsten der modernen Literatur gehören. Ein stilvolles Lesezeichen für Leserinnen und Leser, die sich für deutsche und europäische Literatur interessieren.",
           images: [
@@ -416,7 +287,7 @@
         17: {
           category: "Startseite / Lesezeichen",
           name: "Oktoberfest – Kultur Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen ist inspiriert vom berühmten bayerischen Volksfest Oktoberfest. Das Design greift typische Elemente der deutschen Festkultur auf und bringt ein Stück Bayern in dein Buch. Perfekt für Kulturfans, Reisende und alle, die deutsche Traditionen mögen.",
           images: [
@@ -429,7 +300,7 @@
         18: {
           category: "Startseite / Lesezeichen",
           name: "Deutschlandpfanne Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen zeigt den berühmten Kölner Dom, eines der bekanntesten Wahrzeichen Deutschlands. Neben dem Foto enthält das Design auch kurze Informationen über die Kathedrale und verbindet so Lesen mit kulturellem Wissen. Ein perfektes Lesezeichen für Bücherliebhaber, Reisefans und alle, die sich für deutsche Architektur interessieren.",
           images: [
@@ -442,7 +313,7 @@
         19: {
           category: "Startseite / Lesezeichen",
           name: "Kölner Dom – Architektur Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: " ",
           desc: "Dieses Lesezeichen zeigt den berühmten Kölner Dom, eines der bekanntesten Wahrzeichen Deutschlands. Neben dem Foto enthält das Design auch kurze Informationen über die Kathedrale und verbindet so Lesen mit kulturellem Wissen. Ein perfektes Lesezeichen für Bücherliebhaber, Reisefans und alle, die sich für deutsche Architektur interessieren.",
           images: [
@@ -455,7 +326,7 @@
         20: {
           category: "Startseite / Stofftasche",
           name: "Wurst – Deutsches Wort Stofftasche",
-          price: "₹199",
+          price: "₹250",
           colour: " ",
           desc: "Diese Stofftasche bringt ein klassisches deutsches Wort auf humorvolle Weise in den Alltag. „Wurst“ wird hier zum kreativen Design, das Sprache und Kultur spielerisch verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
           images: [
@@ -468,7 +339,7 @@
         21: {
           category: "Startseite / Stofftasche",
           name: "Nietzsche- Nihilimsus meme Stofftasche",
-          price: "₹199",
+          price: "₹250",
           colour: " ",
           desc: "Diese Stofftasche bringt ein klassisches deutsches Wort auf humorvolle Weise in den Alltag. „Wurst“ wird hier zum kreativen Design, das Sprache und Kultur spielerisch verbindet. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
           images: [
@@ -481,7 +352,7 @@
         22: {
           category: "Startseite / Stofftasche",
           name: "Final Kant down – Kant Wortspiel Stofftasche",
-          price: "₹199",
+          price: "₹250",
           colour: " ",
           desc: "Diese Stofftasche spielt humorvoll mit dem bekannten Song „The Final Countdown“ und verwandelt ihn in das Wortspiel „Final Kantdown“, eine Anspielung auf den Philosophen Immanuel Kant. Gefertigt aus 100 % Baumwolle und mit einer Größe von 15''x 16'' bietet sie genug Platz für Bücher, Einkäufe oder den täglichen Gebrauch. Das robuste Canvas-Material sorgt für Langlebigkeit und bringt das Design besonders gut zur Geltung.",
           images: [
@@ -494,7 +365,7 @@
         23: {
           category: "Startseite / Badges",
           name: "Tja – Deutsches Wort Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 1.25''",
           desc: "Der Badge zeigt das typisch deutsche Wort „Tja“ , das oft verwendet wird, wenn man keine bessere Antwort hat. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -507,7 +378,7 @@
         24: {
           category: "Startseite / Badges",
           name: "Muskatnuss – Deutsches Wort Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 1.25''",
           desc: "Dieser Badge zeigt das deutsche Wort „Muskatnuss“ und verwandelt ein alltägliches Wort in ein kreatives Sprachdesign. Perfekt für Sprachliebhaber und alle, die kleine humorvolle Details mögen. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -520,7 +391,7 @@
         25: {
           category: "Startseite / Badges",
           name: "Doppelgänger x TVD – Serienreferenz Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2.25''",
           desc: "Dieser Badge kombiniert das deutsche Wort „Doppelgänger“ mit einer Popkultur-Referenz zur Serie The Vampire Diaries. Ein kreatives Accessoire für Serienfans und Deutschlernende. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -533,7 +404,7 @@
         26: {
           category: "Startseite / Badges",
           name: "Kafka x KFC – Lustiger Literatur Badge",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2.25''",
           desc: "Dieser kreative Badge verbindet Literatur mit Humor. Das Design spielt auf den berühmten Schriftsteller Kafka an und kombiniert ihn mit einer popkulturellen Referenz. Diese Custom Pin Buttons bestehen aus Metall, sind leicht, langlebig und mit einer stabilen Sicherheitsnadel ausgestattet und lassen sich leicht an Jacken, Taschen oder Rucksäcken befestigen und setzen kleine, persönliche Statements.",
           images: [
@@ -546,7 +417,7 @@
         27: {
           category: "Startseite / Tshirts",
           name: "Fernweh – Wörterbuch Edition T-Shirt",
-          price: "₹299",
+          price: "₹350",
           colour: "Farbe: Marineblau",
           desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
           images: [
@@ -559,7 +430,7 @@
         28: {
           category: "Startseite / Tshirts",
           name: "Fernweh – Wörterbuch Edition T-Shirt",
-          price: "₹299",
+          price: "₹350",
           colour: "Farbe: Kreuzkümmel",
           desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
           images: [
@@ -572,7 +443,7 @@
         29: {
           category: "Startseite / Lesezeichen",
           name: "Fyodor Dostoyevsky Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2 × 6 inch (ca. 5 × 15 cm)",
           desc: "Dieses Lesezeichen zeigt ein Porträt des russischen Schriftstellers Fyodor Dostoevsky vor einem Hintergrund aus handschriftlichen Notizen und literarischen Motiven. Das Design verbindet klassische Literatur mit einem modernen, künstlerischen Stil. Ein ideales Lesezeichen für Leserinnen und Leser, die sich für Weltliteratur und große Romane interessieren.",
           images: [
@@ -585,7 +456,7 @@
         30: {
           category: "Startseite / Lesezeichen",
           name: "Kant Sapere Aude Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2 × 6 inch (ca. 5 × 15 cm)",
           desc: "Dieses Lesezeichen zeigt den Philosophen Immanuel Kant zusammen mit dem berühmten Aufklärungsmotto „Sapere aude!“ aus seinem Essay Beantwortung der Frage: Was ist Aufklärung?. Der lateinische Satz bedeutet: „Habe Mut, dich deines eigenen Verstandes zu bedienen. “ Das Design verbindet Philosophie mit inspirierender Botschaft und macht das Lesezeichen zu einem besonderen Begleiter für Bücher und Studienliteratur.",
           images: [
@@ -598,7 +469,7 @@
         31: {
           category: "Startseite / Lesezeichen",
           name: "Nietzsche Couple Lesezeichen",
-          price: "₹69",
+          price: "₹80",
           colour: "Größe: 2 × 6 inch (ca. 5 × 15 cm)",
           desc: "Dieses Lesezeichen-Set zeigt ein künstlerisches Porträt des Philosophen Friedrich Nietzsche. Das Design ist in zwei Teile geteilt und bildet zusammen das bekannte Zitat „Gott ist tot. “ aus seinem Werk Die fröhliche Wissenschaft. Die beiden Lesezeichen können einzeln verwendet oder zusammen als Set genutzt werden. Ein besonderes Accessoire für Philosophieinteressierte, Literaturfans und alle, die sich für deutsche Geistesgeschichte begeistern.",
           images: [
@@ -611,7 +482,7 @@
         32: {
           category: "Startseite / T-Shirts",
           name: "Torschlusspanik – Deutsches Wort T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Marineblau",
           desc:
             "Bedeutung: " +
@@ -627,7 +498,7 @@
         33: {
           category: "Startseite / T-Shirts",
           name: "Fernweh – Illustration T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Kreuzkümmel",
           desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
           images: [
@@ -640,7 +511,7 @@
         34: {
           category: "Startseite / T-Shirts",
           name: "Fernweh – Illustration T-Shirt",
-          price: "₹249",
+          price: "₹350",
           colour: "Farbe: Marineblau",
           desc: "Dieses T-Shirt zeigt das berühmte deutsche Wort „Fernweh“ zusammen mit seiner Wörterbuchbedeutung und Transkription. Es verbindet Mode mit Sprachlernen und kultureller Neugier. Das weiche Baumwollmaterial sorgt für ein angenehmes Tragegefühl und macht das Shirt ideal für Alltag und Reisen.",
           images: [
@@ -655,10 +526,12 @@
       const product = products[productId];
 
       if (product) {
+        const priceElement = document.getElementById("product-price");
+        const sizeContainer = document.getElementById("size-container");
+
         document.getElementById("product-category").innerText =
           product.category;
         document.getElementById("product-name").innerText = product.name;
-        document.getElementById("product-price").innerText = product.price;
         document.getElementById("product-desc").innerText = product.desc;
         document.getElementById("product-colour").innerText = product.colour;
 
@@ -667,6 +540,50 @@
         document.getElementById("img2").src = product.images[1];
         document.getElementById("img3").src = product.images[2];
         document.getElementById("img4").src = product.images[3];
+
+        if (product.category.includes("Badges")) {
+          sizeContainer.innerHTML = `
+            <select id="size-select">
+              <option value="">Wählen Sie Größe</option>
+              <option value="1.25''">1.25''</option>
+              <option value="2.25''">2.25''</option>
+            </select>
+          `;
+
+          priceElement.innerText = "₹80";
+
+          const sizeSelect = document.getElementById("size-select");
+
+          const badgePrices = {
+            "1.25''": 80,
+            "2.25''": 100,
+          };
+
+          sizeSelect.addEventListener("change", function () {
+            const selectedSize = sizeSelect.value;
+            if (badgePrices[selectedSize]) {
+              priceElement.innerText = "₹" + badgePrices[selectedSize];
+            }
+          });
+        } else if (
+          product.category.includes("T-Shirts") ||
+          product.category.includes("Tshirts")
+        ) {
+          sizeContainer.innerHTML = `
+            <select>
+              <option>Wählen Sie Größe</option>
+              <option>Klein</option>
+              <option>Medium</option>
+              <option>Groß</option>
+              <option>XL</option>
+            </select>
+          `;
+
+          priceElement.innerText = product.price;
+        } else {
+          sizeContainer.innerHTML = "";
+          priceElement.innerText = product.price;
+        }
       }
 
       const mainImg = document.getElementById("main-img");
@@ -678,7 +595,5 @@
         };
       }
     </script>
-
-    <script src="script.js"></script>
   </body>
 </html>
